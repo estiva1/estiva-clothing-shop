@@ -1,6 +1,6 @@
 import "./sign-up-form.styles.scss";
 
-import { useState } from "react";
+import { useContext, useState } from "react";
 
 import {
   createAuthUserWithEmailAndPassword,
@@ -20,8 +20,6 @@ const SignUpForm = () => {
   const [formFields, setFormFields] = useState(defaultFormFields);
   const { displayName, email, password, confirmPassword } = formFields;
 
-  console.log(formFields);
-
   const resetFormFields = () => {
     setFormFields(defaultFormFields);
   };
@@ -31,6 +29,7 @@ const SignUpForm = () => {
 
     if (password !== confirmPassword) {
       alert("Passwords did not match");
+      return;
     }
 
     try {
