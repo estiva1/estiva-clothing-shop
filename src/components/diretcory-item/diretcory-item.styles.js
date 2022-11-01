@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Tilt from "react-parallax-tilt";
 
 export const BackgroundImage = styled.div`
   width: 100%;
@@ -36,15 +37,11 @@ export const Body = styled.div`
 `;
 
 export const DirectoryItemContainer = styled.div`
-  min-width: 30%;
+  width: 30%;
   height: 240px;
   flex: 1 1 auto;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid black;
   margin: 0 7.5px 15px;
-  overflow: hidden;
   &:first-child {
     margin-right: 7.5px;
   }
@@ -60,4 +57,13 @@ export const DirectoryItemContainer = styled.div`
       opacity: 0.9;
     }
   }
+`;
+
+export const TitltContainer = styled(Tilt)`
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+  overflow: hidden;
 `;

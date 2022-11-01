@@ -3,6 +3,7 @@ import {
   BackgroundImage,
   Body,
   DirectoryItemContainer,
+  TitltContainer,
 } from "./diretcory-item.styles.js";
 
 const DiretcoryItem = ({ category }) => {
@@ -13,13 +14,13 @@ const DiretcoryItem = ({ category }) => {
 
   return (
     <DirectoryItemContainer onClick={onNavigateHandler}>
-      <BackgroundImage
-        imageUrl={imageUrl}
-      />
-      <Body>
-        <h2>{title}</h2>
-        <p>Shop Now</p>
-      </Body>
+      <TitltContainer tiltReverse={true}>
+        <BackgroundImage imageUrl={imageUrl} />
+        <Body>
+          <h2>{title}</h2>
+          <p>Shop Now</p>
+        </Body>
+      </TitltContainer>
     </DirectoryItemContainer>
   );
 };
