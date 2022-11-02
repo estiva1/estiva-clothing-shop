@@ -1,9 +1,9 @@
 import { useNavigate } from "react-router-dom";
 import {
   BackgroundImage,
-  Body,
   DirectoryItemContainer,
-  TitltContainer,
+  TextContainer,
+  TiltContainer,
 } from "./diretcory-item.styles.js";
 
 const DiretcoryItem = ({ category }) => {
@@ -14,13 +14,19 @@ const DiretcoryItem = ({ category }) => {
 
   return (
     <DirectoryItemContainer onClick={onNavigateHandler}>
-      <TitltContainer tiltReverse={true}>
+      <TiltContainer
+        tiltReverse={true}
+        glareEnable={true}
+        glareMaxOpacity={0.45}
+        transitionSpeed={4000}
+        perspective={800}
+      >
         <BackgroundImage imageUrl={imageUrl} />
-        <Body>
+        <TextContainer>
           <h2>{title}</h2>
           <p>Shop Now</p>
-        </Body>
-      </TitltContainer>
+        </TextContainer>
+      </TiltContainer>
     </DirectoryItemContainer>
   );
 };

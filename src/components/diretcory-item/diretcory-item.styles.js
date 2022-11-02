@@ -10,18 +10,17 @@ export const BackgroundImage = styled.div`
   transition: transform 2s cubic-bezier(0.25, 0.45, 0.45, 0.95);
 `;
 
-export const Body = styled.div`
-  height: 90px;
+export const TextContainer = styled.div`
+  height: 100px;
   padding: 0 25px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 1px solid black;
   background-color: white;
   opacity: 0.7;
   position: absolute;
-  transition: opacity 1s cubic-bezier(0.445, 0.055, 0.55, 0.95);
+  transition: opacity 2s cubic-bezier(0.445, 0.055, 0.55, 0.95);
 
   h2 {
     font-weight: bold;
@@ -30,9 +29,25 @@ export const Body = styled.div`
     color: #4a4a4a;
     text-transform: uppercase;
   }
-  y p {
+  p {
     font-weight: lighter;
     font-size: 16px;
+  }
+`;
+
+export const TiltContainer = styled(Tilt)`
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: 1px solid white;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.3);
+  &:hover {
+    border: 1px solid black;
+    box-shadow: 8px 8px rgb(47 29 24 / 0.5), -8px -8px rgb(110 127 128 / 0.5);
+    transition: border 2s cubic-bezier(0.25, 0.45, 0.45, 0.95),
+      box-shadow 2s cubic-bezier(0.25, 0.45, 0.45, 0.95);
   }
 `;
 
@@ -42,28 +57,21 @@ export const DirectoryItemContainer = styled.div`
   flex: 1 1 auto;
   display: flex;
   margin: 0 7.5px 15px;
+
   &:first-child {
     margin-right: 7.5px;
   }
   &:last-child {
     margin-left: 7.5px;
   }
+
   &:hover {
     cursor: pointer;
     ${BackgroundImage} {
-      transform: scale(1.1);
+      transform: scale(1.15);
     }
-    ${Body} {
+    ${TextContainer} {
       opacity: 0.9;
     }
   }
-`;
-
-export const TitltContainer = styled(Tilt)`
-  flex: 1 1 auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid black;
-  overflow: hidden;
 `;
