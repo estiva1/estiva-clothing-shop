@@ -5,4 +5,15 @@ export const DirectoryContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+
+  &:hover {
+    > * {
+      opacity: 0.6;
+    }
+  }
+  > div {
+    &:hover {
+      opacity: 1;
+    }
+  }
 `;

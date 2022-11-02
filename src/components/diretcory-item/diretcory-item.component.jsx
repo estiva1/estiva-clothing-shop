@@ -13,21 +13,21 @@ const DiretcoryItem = ({ category }) => {
   const onNavigateHandler = () => navigate(route);
 
   return (
-    <DirectoryItemContainer onClick={onNavigateHandler}>
-      <TiltContainer
-        tiltReverse={true}
-        glareEnable={true}
-        glareMaxOpacity={0.45}
-        transitionSpeed={4000}
-        perspective={800}
-      >
+    <TiltContainer
+      tiltReverse={true}
+      glareEnable={true}
+      glareMaxOpacity={0.45}
+      transitionSpeed={4000}
+      perspective={800}
+    >
+      <DirectoryItemContainer onClick={onNavigateHandler}>
         <BackgroundImage imageUrl={imageUrl} />
         <TextContainer>
           <h2>{title}</h2>
           <p>Shop Now</p>
         </TextContainer>
-      </TiltContainer>
-    </DirectoryItemContainer>
+      </DirectoryItemContainer>
+    </TiltContainer>
   );
 };
 

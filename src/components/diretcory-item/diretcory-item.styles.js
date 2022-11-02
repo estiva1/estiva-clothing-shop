@@ -35,28 +35,18 @@ export const TextContainer = styled.div`
   }
 `;
 
-export const TiltContainer = styled(Tilt)`
-  flex: 1 1 auto;
+export const DirectoryItemContainer = styled.div`
   display: flex;
+  flex: 1 1 auto;
+  width: 30%;
+  height: 240px;
+  margin: 0px 7.5px 15px;
   align-items: center;
   justify-content: center;
   overflow: hidden;
   border: 1px solid white;
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.3);
-  &:hover {
-    border: 1px solid black;
-    box-shadow: 8px 8px rgb(47 29 24 / 0.5), -8px -8px rgb(110 127 128 / 0.5);
-    transition: border 2s cubic-bezier(0.25, 0.45, 0.45, 0.95),
-      box-shadow 2s cubic-bezier(0.25, 0.45, 0.45, 0.95);
-  }
-`;
-
-export const DirectoryItemContainer = styled.div`
-  width: 30%;
-  height: 240px;
-  flex: 1 1 auto;
-  display: flex;
-  margin: 0 7.5px 15px;
+  transition: all 1s cubic-bezier(0.25, 0.45, 0.45, 0.95);
 
   &:first-child {
     margin-right: 7.5px;
@@ -64,9 +54,11 @@ export const DirectoryItemContainer = styled.div`
   &:last-child {
     margin-left: 7.5px;
   }
-
   &:hover {
+    transform: scale(0.92);
+    box-shadow: 8px 8px rgb(47 29 24 / 0.5), -8px -8px rgb(110 127 128 / 0.5);
     cursor: pointer;
+
     ${BackgroundImage} {
       transform: scale(1.15);
     }
@@ -74,4 +66,13 @@ export const DirectoryItemContainer = styled.div`
       opacity: 0.9;
     }
   }
+`;
+
+export const TiltContainer = styled(Tilt)`
+  display: flex;
+  flex: 1 1 auto;
+  width: 30%;
+  height: 240px;
+  margin-bottom: 15px;
+  transition: opacity 1s cubic-bezier(0.25, 0.45, 0.45, 0.95);
 `;
