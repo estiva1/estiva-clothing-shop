@@ -45,7 +45,7 @@ export const DirectoryItemContainer = styled.div`
   justify-content: center;
   overflow: hidden;
   border: 1px solid white;
-  box-shadow: 0 3px 10px rgb(0 0 0 / 0.3);
+  box-shadow: 0 3px 16px rgb(0 0 0 / 0.3);
   transition: all 1s cubic-bezier(0.25, 0.45, 0.45, 0.95);
 
   &:first-child {
@@ -56,7 +56,8 @@ export const DirectoryItemContainer = styled.div`
   }
   &:hover {
     transform: scale(0.92);
-    box-shadow: 8px 8px rgb(47 29 24 / 0.5), -8px -8px rgb(110 127 128 / 0.5);
+    box-shadow: 0 3px 24px rgb(0 0 0 / 0.9), 8px 8px rgb(47 29 24 / 0.5), -8px -8px rgb(110 127 128 / 0.5);
+
     cursor: pointer;
 
     ${BackgroundImage} {

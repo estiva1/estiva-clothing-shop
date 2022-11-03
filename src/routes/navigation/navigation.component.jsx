@@ -10,7 +10,7 @@ import { CartContext } from "../../contexts/cart.context";
 
 import { signOutUser } from "../../utils/firebase/firebase.utils";
 
-import {LogoContainer, NavigationContainer, NavLinks, NavLink} from "./navigation.styles";
+import {LogoContainer, NavigationContainer, NavLinks, NavLink, Logo} from "./navigation.styles";
 
 const Navigation = () => {
   const { currentUser } = useContext(UserContext);
@@ -20,7 +20,7 @@ const Navigation = () => {
     <Fragment>
       <NavigationContainer>
         <LogoContainer to="/">
-          <ShopLogo className="logo" to="/" />
+          <ShopLogo />
         </LogoContainer>
         <NavLinks>
           <NavLink to="/shop">
