@@ -20,6 +20,7 @@ import {
   query,
   getDocs,
 } from "firebase/firestore";
+import { promised } from "q";
 
 const firebaseConfig = {
   apiKey: "AIzaSyALqD1btsKHl-raL_sDhj6Km8ghPXJrYVA",

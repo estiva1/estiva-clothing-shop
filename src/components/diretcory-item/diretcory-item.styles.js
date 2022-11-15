@@ -57,7 +57,6 @@ export const DirectoryItemContainer = styled.div`
   &:hover {
     transform: scale(0.92);
     box-shadow: 0 3px 24px rgb(0 0 0 / 0.9), 8px 8px rgb(47 29 24 / 0.5), -8px -8px rgb(110 127 128 / 0.5);
-
     cursor: pointer;
 
     ${BackgroundImage} {
