@@ -27,7 +27,10 @@ const Navigation = () => {
     <Fragment>
       <NavigationContainer>
         <LogoContainer to="/">
-          <ShopLogo />
+          {/* <ShopLogo /> */}
+          <div>
+            <img src="../../assets/shop-logo.png" />
+          </div>
         </LogoContainer>
         <NavLinks>
           <NavLink to="/shop">SHOP</NavLink>
