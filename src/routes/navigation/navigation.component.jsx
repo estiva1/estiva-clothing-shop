@@ -2,7 +2,7 @@ import { Fragment } from "react";
 import { Outlet } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 
-import { ReactComponent as ShopLogo } from "../../assets/shop-logo-old.svg";
+import shopLogo from "../../assets/shop-logo.png";
 import CartDropdown from "../../components/cart-dropdown/cart-dropdown.component";
 import CartIcon from "../../components/cart-icon/cart-icon.component";
 import { selectCurrentUser } from "../../store/user/user.selector";
@@ -27,10 +27,7 @@ const Navigation = () => {
     <Fragment>
       <NavigationContainer>
         <LogoContainer to="/">
-          {/* <ShopLogo /> */}
-          <div>
-            <img src="../../assets/shop-logo.png" />
-          </div>
+          <img src={shopLogo} alt="Shop Logo" />
         </LogoContainer>
         <NavLinks>
           <NavLink to="/shop">SHOP</NavLink>
