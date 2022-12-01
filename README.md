@@ -2,6 +2,8 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+If you want to check it live, visit: https://ornate-sunflower-53e2c7.netlify.app
+
 ## Available Scripts
 
 In the project directory, you can run:
