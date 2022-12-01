@@ -5,7 +5,6 @@ import { useDispatch, useSelector } from "react-redux";
 import shopLogo from "../../assets/shop-logo.png";
 import CartDropdown from "../../components/cart-dropdown/cart-dropdown.component";
 import CartIcon from "../../components/cart-icon/cart-icon.component";
-import { selectCurrentUser } from "../../store/user/user.selector";
 
 import {
   LogoContainer,
@@ -14,6 +13,8 @@ import {
   NavLink,
 } from "./navigation.styles";
 import { selectIsCartOpen } from "../../store/cart/cart.selector";
+import { selectCurrentUser } from "../../store/user/user.selector";
+
 import { signOutStart } from "../../store/user/user.action";
 
 const Navigation = () => {
