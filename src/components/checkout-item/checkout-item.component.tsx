@@ -1,3 +1,4 @@
+import { FC } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import {
@@ -5,7 +6,9 @@ import {
   clearItemFromCart,
   removeItemFromCart,
 } from "../../store/cart/cart.action";
+
 import { selectCartItems } from "../../store/cart/cart.selector";
+
 import {
   Arrow,
   CheckoutItemContainer,
@@ -17,7 +20,13 @@ import {
   RemoveButton,
 } from "./checkout-item.styles";
 
-const ChekoutItem = ({ cartItem }) => {
+import { CartItem } from '../../store/cart/cart.types';
+
+type CheckoutItemProps = {
+  cartItem: CartItem;
+}
+
+const ChekoutItem: FC<CheckoutItemProps> = ({ cartItem }) => {
   const { name, imageUrl, price, quantity } = cartItem;
   const cartItems = useSelector(selectCartItems);
   const dispatch = useDispatch();
@@ -39,7 +48,7 @@ const ChekoutItem = ({ cartItem }) => {
         <QuantityValue>{quantity}</QuantityValue>
         <Arrow onClick={addItemHandler}>&#10095;</Arrow>
       </Quantity>
-      <Price>{price}</Price>
+      <Price>${price*quantity}</Price>
       <RemoveButton onClick={clearItemHandler}>&#10005;</RemoveButton>
     </CheckoutItemContainer>
   );
