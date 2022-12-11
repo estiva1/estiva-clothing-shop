@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 
 import {
@@ -8,17 +8,19 @@ import {
   TiltContainer,
 } from "./diretcory-item.styles";
 
-import { DirectoryCategory } from '../directory/directory.component';
+import { DirectoryCategory } from "../directory/directory.component";
 
 type DirectoryItemProps = {
   category: DirectoryCategory;
-}
+};
 
-const DiretcoryItem:FC<DirectoryItemProps> = ({ category }) => {
+const DiretcoryItem: FC<DirectoryItemProps> = ({ category }) => {
   const { imageUrl, title, route } = category;
   const navigate = useNavigate();
 
-  const onNavigateHandler = () => navigate(route);
+  const onNavigateHandler = useCallback(() => {
+    navigate(route);
+  }, [navigate]);
 
   return (
     <TiltContainer
