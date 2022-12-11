@@ -28,7 +28,7 @@ const DiretcoryItem: FC<DirectoryItemProps> = ({ category }) => {
       glareEnable={true}
       glareMaxOpacity={0.45}
       transitionSpeed={4000}
-      perspective={800}
+      perspective={900}
     >
       <DirectoryItemContainer onClick={onNavigateHandler}>
         <BackgroundImage imageUrl={imageUrl} />

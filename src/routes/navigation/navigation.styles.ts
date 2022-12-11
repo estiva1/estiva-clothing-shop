@@ -2,23 +2,32 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const NavigationContainer = styled.div`
-  --navigation-container-height: 70px;
-  height: var(--navigation-container-height);
-  width: 100%;
   display: flex;
+  height: 70px;
+  width: 100%;
   justify-content: space-between;
   margin-bottom: 25px;
+
+  @media screen and (max-width: 800px) {
+    height: 60px;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
 `;
 
 export const LogoContainer = styled(Link)`
-  --logo-container-height: 17px;
-  display: flex;
-  height: var(--logo-container-height);
-  width: auto;
-  margin: calc(
-      (var(--navigation-container-height) - var(--logo-container-height)) / 2
-    )
-    10px;
+  width: 70px;
+  height: 100%;
+  margin: 0 25px;
+  transition: all 0.2s ease-in-out;
+  &:hover, &:focus {
+    transform: scale(1.15);
+  }
+
+  @media screen and (max-width: 800px) {
+    width: 40px;
+    margin: 0 11px;
+  }
 `;
 
 export const NavLinks = styled.div`
@@ -27,6 +36,10 @@ export const NavLinks = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
+
+  @media screen and (max-width: 800px) {
+    width: 70%;
+  }
 `;
 
 export const NavLink = styled(Link)`
@@ -54,9 +67,9 @@ export const NavLink = styled(Link)`
     transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275),
       opacity 0.2s;
   }
-  &:hover {
+  &:hover, &:focus {
     &:before,
-    &:after {
+    &:after { 
       opacity: 1;
       transform: translateY(0);
     }

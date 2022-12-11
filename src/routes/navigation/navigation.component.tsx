@@ -2,7 +2,8 @@ import { Fragment } from "react";
 import { Outlet } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 
-import shopLogo from "../../assets/shop-logo.png";
+import { ReactComponent as ShopLogo } from "../../assets/logo.svg";
+
 import CartDropdown from "../../components/cart-dropdown/cart-dropdown.component";
 import CartIcon from "../../components/cart-icon/cart-icon.component";
 
@@ -12,6 +13,7 @@ import {
   NavLinks,
   NavLink,
 } from "./navigation.styles";
+
 import { selectIsCartOpen } from "../../store/cart/cart.selector";
 import { selectCurrentUser } from "../../store/user/user.selector";
 
@@ -28,7 +30,7 @@ const Navigation = () => {
     <Fragment>
       <NavigationContainer>
         <LogoContainer to="/">
-          <img src={shopLogo} alt="Shop Logo" />
+          <ShopLogo />
         </LogoContainer>
         <NavLinks>
           <NavLink to="/shop">SHOP</NavLink>

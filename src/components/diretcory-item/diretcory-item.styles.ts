@@ -39,11 +39,15 @@ export const TextContainer = styled.div`
   }
 `;
 
-export const DirectoryItemContainer = styled.div`
+type DirectoryItemContainerProps = {
+  size?: string;
+};
+
+export const DirectoryItemContainer = styled.div<DirectoryItemContainerProps>`
   display: flex;
   flex: 1 1 auto;
-  width: 30%;
-  height: 240px;
+  min-width: 30%;
+  height: ${({ size }) => (size ? "380px" : "240px")};
   margin: 0px 7.5px 15px;
   align-items: center;
   justify-content: center;
@@ -58,9 +62,10 @@ export const DirectoryItemContainer = styled.div`
   &:last-child {
     margin-left: 7.5px;
   }
-  &:hover {
+  &:hover, &:focus {
     transform: scale(0.92);
-    box-shadow: 0 3px 24px rgb(0 0 0 / 0.9), 8px 8px rgb(47 29 24 / 0.5), -8px -8px rgb(110 127 128 / 0.5);
+    box-shadow: 0 3px 24px rgb(0 0 0 / 0.9), 8px 8px rgb(47 29 24 / 0.5),
+      -8px -8px rgb(110 127 128 / 0.5);
     cursor: pointer;
 
     ${BackgroundImage} {
@@ -70,13 +75,26 @@ export const DirectoryItemContainer = styled.div`
       opacity: 0.9;
     }
   }
+  @media screen and (max-width: 800px) {
+    min-width: 40%;
+    height: 200px;
+  }
 `;
 
-export const TiltContainer = styled(Tilt)`
+type TiltContainerProps = {
+  size?: string;
+};
+
+export const TiltContainer = styled(Tilt)<TiltContainerProps>`
   display: flex;
   flex: 1 1 auto;
   width: 30%;
-  height: 240px;
+  height: ${({ size }) => (size ? "380px" : "240px")};
   margin-bottom: 15px;
   transition: opacity 1s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+  
+  @media screen and (max-width: 800px) {
+    width: 40%;
+    height: 200px;
+  }
 `;
