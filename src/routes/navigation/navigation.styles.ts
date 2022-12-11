@@ -6,21 +6,24 @@ export const NavigationContainer = styled.div`
   height: 70px;
   width: 100%;
   justify-content: space-between;
+  border-bottom: 2px ridge rgba(94, 94, 92, 0.5);
+
   margin-bottom: 25px;
 
   @media screen and (max-width: 800px) {
     height: 60px;
     padding: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
   }
 `;
 
 export const LogoContainer = styled(Link)`
-  width: 70px;
+  width: 50px;
   height: 100%;
   margin: 0 25px;
   transition: all 0.2s ease-in-out;
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     transform: scale(1.15);
   }
 
@@ -67,9 +70,10 @@ export const NavLink = styled(Link)`
     transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275),
       opacity 0.2s;
   }
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     &:before,
-    &:after { 
+    &:after {
       opacity: 1;
       transform: translateY(0);
     }
