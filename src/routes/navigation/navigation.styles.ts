@@ -6,7 +6,7 @@ export const NavigationContainer = styled.div`
   height: 70px;
   width: 100%;
   justify-content: space-between;
-  border-bottom: 2px ridge rgba(94, 94, 92, 0.5);
+  border-bottom: 2px ridge rgba(0, 66, 66, 0.5);
 
   margin-bottom: 25px;
 
