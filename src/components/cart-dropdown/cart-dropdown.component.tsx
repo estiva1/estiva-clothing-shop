@@ -33,7 +33,6 @@ const CartDropdown = () => {
         )}
       </CartItems>
       <Button onClick={goToCheckoutHandler}>CHECKOUT</Button>
-      <Button onClick={goToCheckoutHandler}>UPDATE</Button>
     </CartDropdownContainer>
   );
 };

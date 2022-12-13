@@ -1,8 +1,6 @@
-import { lazy, Suspense, useCallback, useEffect } from "react";
+import { lazy, Suspense, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { Routes, Route } from "react-router-dom";
-
-import Particles from "react-tsparticles";
 
 import { checkUserSession } from "./store/user/user.action";
 
