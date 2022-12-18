@@ -41,7 +41,7 @@ export const NavLinks = styled.div`
   justify-content: flex-end;
 
   @media screen and (max-width: 800px) {
-    width: 70%;
+    width: 75%;
   }
 `;
 
@@ -58,6 +58,9 @@ export const NavLink = styled(Link)`
     right: 0;
     height: 2px;
     background-color: #f37272;
+  }
+  @media screen and (max-width: 800px) {
+    padding: 10px 10px;
   }
   &:before {
     opacity: 0;
