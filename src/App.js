@@ -16,6 +16,9 @@ const Home = lazy(() => import("./routes/home/home.component"));
 const Authentication = lazy(() =>
   import("./routes/authentication/authentication.component")
 );
+const Registration = lazy(() =>
+  import("./routes/registration/registration.component")
+);
 
 const App = () => {
   const dispatch = useDispatch();
@@ -32,6 +35,7 @@ const App = () => {
           <Route index element={<Home />} />
           <Route path="shop/*" element={<Shop />} />
           <Route path="auth" element={<Authentication />} />
+          <Route path="registration" element={<Registration />} />
           <Route path="checkout" element={<Checkout />} />
         </Route>
       </Routes>

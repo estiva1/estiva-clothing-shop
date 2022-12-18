@@ -34,13 +34,15 @@ const Navigation = () => {
         </LogoContainer>
         <NavLinks>
           <NavLink to="/shop">SHOP</NavLink>
-
           {currentUser ? (
             <NavLink as="span" onClick={signOutUser}>
               SIGN OUT
             </NavLink>
           ) : (
-            <NavLink to="/auth">SIGN IN</NavLink>
+            <>
+              <NavLink to="/auth">SIGN IN</NavLink>
+              <NavLink to="/registration">SIGN UP</NavLink>
+            </>
           )}
           <CartIcon />
         </NavLinks>
