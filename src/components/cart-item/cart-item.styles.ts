@@ -8,7 +8,8 @@ export const CartItemContainer = styled.div`
 `;
 
 export const CartItemImage = styled.img`
-  width: 40%;
+  height: auto;
+  max-width: 35%;
 `;
 
 export const ItemDetails = styled.div`
