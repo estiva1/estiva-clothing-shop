@@ -7,10 +7,7 @@ import {
   selectCartTotal,
 } from "../../store/cart/cart.selector";
 
-import {
-  CheckoutContainer,
-  Total,
-} from "./checkout.styles";
+import { CheckoutContainer, EmptyMessage, Total } from "./checkout.styles";
 
 const Checkout = () => {
   const cartItems = useSelector(selectCartItems);
@@ -18,9 +15,13 @@ const Checkout = () => {
 
   return (
     <CheckoutContainer>
-      {cartItems.map((cartItem) => (
-        <ChekoutItem key={cartItem.id} cartItem={cartItem} />
-      ))}
+      {cartItems.length ? (
+        cartItems.map((cartItem) => (
+          <ChekoutItem key={cartItem.id} cartItem={cartItem} />
+        ))
+      ) : (
+        <EmptyMessage>It's empty here... :(</EmptyMessage>
+      )}
       <Total>Total: ${cartTotal}</Total>
       <PaymentForm />
     </CheckoutContainer>

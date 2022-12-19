@@ -13,7 +13,7 @@ export const CartDropdownContainer = styled.div`
   background-color: white;
   top: 90px;
   right: 40px;
-  z-index: 5;
+  z-index: 9;
 
   ${BaseButton} {
     margin-top: 10px;
@@ -28,6 +28,7 @@ export const EmptyCartMessage = styled.span`
 export const CartItems = styled.div`
   height: 240px;
   display: flex;
+  
   flex-direction: column;
-  overflow: scroll;
+  overflow: auto;
 `;

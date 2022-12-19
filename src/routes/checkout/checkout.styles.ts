@@ -13,6 +13,10 @@ export const CheckoutContainer = styled.div`
   }
 `;
 
+export const EmptyMessage = styled.h2`
+color: lightgray;
+`
+
 export const Total = styled.span`
   margin-top: 30px;
   margin-left: auto;
